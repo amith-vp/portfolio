@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Metadata } from "next"
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "AMITH",
@@ -22,6 +23,18 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-YZPTFZNCLP`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YZPTFZNCLP');
+          `}
+        </Script>
       </head>
       <body className="font-jetbrains">
         <ThemeProvider
