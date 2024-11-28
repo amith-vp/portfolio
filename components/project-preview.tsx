@@ -159,8 +159,8 @@ export function ProjectList() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl border border-neutral-200 dark:border-neutral-800 font-jetbrains cursor-pointer transition-all duration-300 hover:scale-[1.02] p-4"
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl border border-neutral-200 dark:border-neutral-800 font-jetbrains cursor-pointer transition-transform duration-300 hover:scale-105 p-4"
               onClick={() => window.open(activeProject.url, '_blank')}
             >
               <div className="relative h-[180px] w-full bg-neutral-100 dark:bg-neutral-800 overflow-hidden rounded-lg mb-4">
